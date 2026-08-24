@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestro Sistema Solar</title>
+    <link rel="stylesheet" href="./Assets/css/Estilo.css">
+</head>
+<body>
+    <div class="contenedorMenu">
+        <header>
+            <nav class="navegacionPrincipal">
+                <div class="menuEnlaces">
+                    <a class="boton" href="Index.html"> Inicio </a>
+                    <a class="botonActivo" href="Sistema.html"> Nuestro Sistema </a>
+                    <a class="boton" href="Somos.html"> Quienes Somos </a>
+                </div>
+
+                <button id="btnTema" class="botonTema" onclick="alternarModo()">Modo Oscuro</button>
+            </nav>
+        </header>
+    </div>
+
+    <div class="contenedorTexto">
+        <h1>Nuestro Sistema Solar</h1>
+        <p>Explora los planetas de nuestro sistema solar navegando con los botones laterales.</p>
+    </div>
+
+    <div class="contenedorCarrusel">
+        <button class="botonCarrusel" onclick="cambiarPlaneta(-1)">◀</button>
+        
+        <div class="contenedorFoto">
+            <h2 id="planetaNombre">Mercurio</h2>
+            <img id="planetaImg" class="imagenInicio" src="./Assets/Img/mercurio.webp" alt="Foto mostrando al planeta Mercurio, El planeta más cercano al Sol y el más pequeño del sistema solar.">
+            <h3 id="planetaDesc">El planeta más cercano al Sol y el más pequeño del sistema solar.</h3>
+        </div>
+
+        <button class="botonCarrusel" onclick="cambiarPlaneta(1)">▶</button>
+    </div>
+
+    <script src="./Assets/Js/Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+:root {
+    /* Modo Claro (Default) */
+    --bg-global: #fcfbf9;
+    --bg-modulo: #d9dde2;
+    --bg-header: #1a1c23;
+    
+    --texto-color: #1a1a1a;
+    --texto-muted: #444444;
+    --borde-color: #e6e3de;
+    
+    --color-acento: #4f46e5;
+    --boton-bg: rgba(112, 112, 112, 0.897);
+    --boton-activo-bg: rgba(217, 216, 253, 0.897);
+    --boton-activo-texto: #1a1a1a;
+    --boton-texto: #ffffff;
+    
+    --radius-editorial: 4px;
+    --sombra-header: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --sombra-foto: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode {
+    /* Modo Oscuro */
+    --bg-global: #0d0d0d;
+    --bg-modulo: #5f5f5f;
+    --bg-header: #070708;
+    
+    --texto-color: #f5f5f5;
+    --texto-muted: #b4b3b3;
+    --borde-color: #262626;
+    
+    --color-acento: #a5b4fc;
+    --boton-bg: #262626;
+    --boton-activo-bg: #a5b4fc;
+    --boton-activo-texto: #0d0d0d;
+    --boton-texto: #f5f5f5;
+    
+    --sombra-header: 0 2px 10px rgba(0, 0, 0, 0.8);
+    --sombra-foto: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--bg-global);
+    color: var(--texto-color);
+    transition: var(--transicion);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+}
+
+.contenedorMenu {
+    background-color: var(--bg-header);
+    padding: 15px 0;
+    box-shadow: var(--sombra-header);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: var(--transicion);
+}
+
+.navegacionPrincipal {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    width: 100%;                     
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menuEnlaces {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boton {
+    background-color: var(--boton-bg);
+    color: var(--boton-texto);
+    padding: 2px 8px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: var(--radius-editorial);
+    transition: var(--transicion);
+}
+
+.botonActivo {
+    background-color: var(--boton-activo-bg);
+    color: var(--boton-activo-texto);
+    padding: 2px 8px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: var(--radius-editorial);
+    transition: var(--transicion);
+}
+
+.botonTema {
+    background-color: var(--color-acento);
+    color: #ffffff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: var(--radius-editorial);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.contenedorTexto {
+    background-color: var(--bg-modulo);
+    border: 1px solid var(--borde-color);
+    border-radius: var(--radius-editorial);
+    padding: 24px;
+    margin: 25px auto;
+    box-shadow: var(--sombra-foto);
+    backdrop-filter: blur(5px);
+    max-width: 650px;
+}
+
+.contenedorFoto {
+    max-width: 500px; 
+    margin: 20px auto; 
+    text-align: left; 
+    background-color: var(--bg-modulo);
+    padding: 6px;
+    box-shadow: var(--sombra-foto);
+    border-radius: var(--radius-editorial);
+    transition: var(--transicion);
+}
+
+.imagenInicio {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.contenedorFoto h3 {
+    font-size: 0.95rem;
+    color: var(--texto-muted);
+    margin-top: 10px;
+    transition: var(--transicion);
+}
+
+/*De sistemas.html*/
+
+.contenedorCarrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.botonCarrusel {
+    background-color: var(--boton-bg);
+    color: var(--boton-texto);
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+    border-radius: var(--radius-editorial);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.botonCarrusel:hover {
+    background-color: var(--color-acento);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.contenedorCarrusel .contenedorFoto {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.contenedorFoto h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: var(--texto-color);
+}
