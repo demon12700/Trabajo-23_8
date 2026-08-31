@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (btn) btn.innerText = "🌙 Modo Oscuro";
     }
 
-    cambiarPlaneta(0)
+    if (document.getElementById("planetaNombre")) {
+        cambiarPlaneta(0)
+    }
+
 });
 
 function alternarModo() {
@@ -40,7 +43,7 @@ const planetas = [
     },
     {
         nombre: "Venus",
-        imagen: "./Assets/Img/venus.jpg",
+        imagen: "./Assets/Img/Venus.jpg",
         descripcion: "El segundo planeta desde el Sol y el más caliente debido a su densa atmósfera."
     },
     {

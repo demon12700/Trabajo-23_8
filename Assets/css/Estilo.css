@@ -1,7 +1,7 @@
 :root {
     /* Modo Claro (Default) */
     --bg-global: #fcfbf9;
-    --bg-modulo: #d9dde2;
+    --bg-modulo: rgba(217, 221, 226, 0.85);
     --bg-header: #1a1c23;
     
     --texto-color: #1a1a1a;
@@ -23,7 +23,7 @@
 .dark-mode {
     /* Modo Oscuro */
     --bg-global: #0d0d0d;
-    --bg-modulo: #5f5f5f;
+    --bg-modulo: rgba(45, 45, 45, 0.85);
     --bg-header: #070708;
     
     --texto-color: #f5f5f5;
